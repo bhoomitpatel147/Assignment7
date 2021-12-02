@@ -1,0 +1,51 @@
+<p>
+    <label for="username">Username:</label>
+    <input name="username" id="username" type="text" />
+</p>
+<p>
+    <label for="password">Password:</label>
+    <input name="password" id="password" type="@TxtType" />
+</p>
+<p>
+    <label>
+        <input @onclick="PasswordType" type="checkbox" @bind="PasswordVisible">Show Password</label>
+</p>
+<p>
+    <button @onclick="OnLoginCallback">LOGIN</button>
+</p>
+
+
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public bool PasswordVisible { get; set; } = true;
+
+    [Parameter]
+    public string TxtType { get; set; } = "text";
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnLoginCallback { get; set; }
+
+
+
+    private void PasswordType()
+    {
+
+        if (PasswordVisible == false)
+        {
+            TxtType = "text";
+        }
+        else
+        {
+            TxtType = "password";
+        }
+    }
+
+    public void LastChange()
+    {
+
+    }
+}

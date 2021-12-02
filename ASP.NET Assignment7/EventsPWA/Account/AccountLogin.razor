@@ -1,0 +1,23 @@
+@page "/account-login"
+
+
+<LoginComponent OnLoginCallback="@ShowMessage">Content of the child component is
+    supplied by
+    parent component.
+</LoginComponent>
+
+
+<p>@message</p>
+
+@code {
+    private string message;
+    private void ShowMessage(MouseEventArgs e)
+    {
+        message = "Login Successful!!";
+
+    }
+
+
+}
+
+<component type="typeof(App)" render-mode="WebAssemblyPrerendered" />

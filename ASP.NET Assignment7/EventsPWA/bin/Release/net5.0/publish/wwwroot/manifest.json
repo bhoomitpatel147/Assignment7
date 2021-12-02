@@ -1,0 +1,15 @@
+{
+  "name": "EventsPWA",
+  "short_name": "BhoomitPatel",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ADEFD1FF",
+  "theme_color": "#00203FFF",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
